@@ -18,16 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
-         {/* Sidebar for Desktop */}
-         
-         <Sidebar />
-        {/* Navbar for Mobile */}
-        <Navbar />
-        {/* Main Content */}
-        <main className="w-full lg:w-3/4 ml-auto p-6">{children}</main>
-        {children}
-      </body>
-    </html>
+    <body className="flex">
+      {/* Sidebar for Desktop */}
+
+      <Sidebar />
+
+      {/* Navbar for Mobile */}
+      <Navbar />
+      {/* Main Content Area */}
+      <main className="w-[80vw] ml-auto p-6" style={{width:"80vw"}}>{children}</main>
+    </body>
+  </html>
   );
 }
