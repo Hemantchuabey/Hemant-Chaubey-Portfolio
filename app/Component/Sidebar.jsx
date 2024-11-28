@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Sidebar = () => {
 
@@ -16,6 +16,29 @@ const Sidebar = () => {
     { name: "Achievements", id: "achievements" },
     { name: "Certifications", id: "certifications" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = links.map((link) => document.getElementById(link.id));
+      sections.forEach((section) => {
+        const rect = section?.getBoundingClientRect();
+        if (rect && rect.top >= 0 && rect.top < window.innerHeight / 2) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [links]);
+
+  const handleLinkClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
     <aside className="hidden lg:flex fixed top-0 left-0 h-full bg-orange-700 text-white flex-col items-center" style={{width:"20vw"}}>
@@ -37,11 +60,13 @@ const Sidebar = () => {
             <button
               key={item.id}
               href={`#${item.name.toLowerCase()}`}
-              onClick={() => setActiveSection(item.id)}
-              className={`w-full text-center px-4 py-2 rounded transition-all ${
+              onClick={() =>{ setActiveSection(item.id),
+                handleLinkClick(item.id)}
+              }
+              className={`w-full text-center px-4 py-2 rounded transition-all 0.3 ease-in ${
                 activeSection === item.id
                   ? "bg-orange-600 text-white font-semibold"
-                  : "hover:bg-orange-600 hover:scale-95 text-gray-300"
+                  : "hover:bg-orange-600 hover:scale-95 text-gray-300 0.3 ease-in"
               }`}
             >
 {/* {`w-full text-center px-4 py-2 

@@ -53,7 +53,7 @@ const Navbar = () => {
                     setActiveSection(item.id);
                     setMenuOpen(false);
                   }}
-                   className={`w-full text-center px-4 py-2 rounded transition-all ${
+                   className={`w-full text-center px-4 py-2 rounded transition-all 0.3 ease-in ${
                     activeSection === item.id
                       ? "bg-orange-600 text-white font-semibold"
                       : "hover:bg-orange-600 hober:scale-95 text-gray-300"
