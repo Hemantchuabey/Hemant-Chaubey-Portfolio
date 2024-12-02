@@ -2,20 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState,useEffect } from "react";
+import { useState,useEffect, useMemo } from "react";
 
 const Sidebar = () => {
 
   const [activeSection, setActiveSection] = useState("about");
 
-  const links = [
+  const links = useMemo(() => [
     { name: "About", id: "about" },
     { name: "Experience", id: "experience" },
-    { name: "Education", id: "education" },
     { name: "Skills", id: "skills" },
-    { name: "Achievements", id: "achievements" },
+    { name: "Projects", id: "projects" },
+    { name: "Education", id: "education" },
     { name: "Certifications", id: "certifications" },
-  ];
+    { name: "Interest", id: "interest" },
+  ],[])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,10 +70,6 @@ const Sidebar = () => {
                   : "hover:bg-orange-600 hover:scale-95 text-gray-300 0.3 ease-in"
               }`}
             >
-{/* {`w-full text-center px-4 py-2 
-                hover:bg-orange-600 hover:scale-95 transition-all rounded`} */}
-
-
               {item.name}
             </button>
           )

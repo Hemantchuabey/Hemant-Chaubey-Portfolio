@@ -10,10 +10,11 @@ const Navbar = () => {
   const links = [
     { name: "About", id: "about" },
     { name: "Experience", id: "experience" },
-    { name: "Education", id: "education" },
     { name: "Skills", id: "skills" },
-    { name: "Achievements", id: "achievements" },
+    { name: "Projects", id: "projects" },
+    { name: "Education", id: "education" },
     { name: "Certifications", id: "certifications" },
+    { name: "Interest", id: "interest" },
   ];
   return (
     <header className="lg:hidden fixed top-0 left-0 w-full bg-orange-700 text-white flex items-center justify-between px-4 py-3 z-50">
