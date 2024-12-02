@@ -5,7 +5,7 @@ const Education = () => {
     {
       institute: "Vidyavardhini's College of Engineering and Technology",
       degree: "Bachelor of Engineering",
-      field: "Electronics and Telecomminication",
+      field: "Electronics and Telecomminication Engineering",
       cgpa: "8.28",
       duration: "August 2017 - June 2021",
     },

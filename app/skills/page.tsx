@@ -89,7 +89,7 @@ const Skills = () => {
         <h3 className="text-2xl font-semibold mb-4">Technical Skills</h3>
         <ul className="list-disc list-inside space-y-2 text-lg">
           {technicalSkills.map((skill, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-gray-600 hover:text-gray-900">
               {skill}
             </li>
           ))}
@@ -101,7 +101,7 @@ const Skills = () => {
         <h3 className="text-2xl font-semibold mb-4">Other Skills</h3>
         <ul className="list-disc list-inside space-y-2 text-lg">
           {otherSkills.map((skill, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="text-gray-600 hover:text-gray-900">
               {skill}
             </li>
           ))}

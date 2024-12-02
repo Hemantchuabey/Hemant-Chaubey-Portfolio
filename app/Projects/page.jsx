@@ -24,7 +24,7 @@ function Projects() {
             width={450}
             height={450}
           />
-          <h2 className='text-xl'>{project.name}</h2>
+          <h2 className='text-xl text-gray-600 hover:text-gray-900'>{project.name}</h2>
         </Link>
         ))}
         
