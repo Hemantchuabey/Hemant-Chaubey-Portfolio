@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 
 const About = () => (
-  <div className="header flex flex-col gap-[1.2rem] m-auto h-full">
+  <div className="header flex flex-col gap-[1.2rem] m-auto h-full" id='about'>
     <h1 className='lg:text-7xl text-6xl text-blue-950 p-0 m-0'>Hemant <span className='font-semibold text-orange-700'>Chaubey</span></h1>
     <h2 className='lg:text-2xl text-xl text-gray-400' >Mumbai, Maharashtra - <a href="mailto:hementchaubey@gmail.com" className='text-orange-700 hover:text-orange-600 hover:underline transition-all 0.3 ease-in'>hementchaubey@gmail.com</a></h2>
     <p className='lg:text-xl text-lg text-blue-950'>Front-end enthusiast seeking opportunities and challenges that will expand my skill set.Worked through hours on HTML, CSS, JavaScript, Reactjs, NextJS, Redux, TypeScript, Redux-Toolkit, RTK-Query, MySql, Tailwind CSS, and GIT. Eager to tackle web development/design challenges to achieve long-lasting impact on user experience..</p>

@@ -3,7 +3,7 @@ import React from 'react'
 const Interest = () => {
   return (
     <section id="interest" className="p-8">
-      <h2 className="text-4xl font-bold mb-6">
+      <h2 className="text-4xl font-bold mb-6 text-orange-600">
         Interest
 </h2>
         <h2 className='text-gray-600 hover:text-gray-900'>

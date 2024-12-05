@@ -21,8 +21,8 @@ const Experience = () => {
   ];
 
   return (
-    <div className="px-6 py-10">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Experience</h1>
+    <div className="px-6 py-10" id="experience">
+      <h1 className="text-4xl font-bold text-orange-600 mb-6">Experience</h1>
       {experiences.map((exp, index) => (
         <div key={index} className="mb-8">
           <h2 className="text-2xl font-semibold text-orange-700">{exp.title}</h2>

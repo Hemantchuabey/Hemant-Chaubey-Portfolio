@@ -11,7 +11,7 @@ function Projects() {
     ]
   return (
     <section id="projects" className="p-8">
-      <h2 className="text-4xl font-bold mb-6">Projects</h2>
+      <h2 className="text-4xl font-bold mb-6 text-orange-600">Projects</h2>
     <div>
         <h3 className="text-xl font-medium mb-4">Programming Languages & Tools</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

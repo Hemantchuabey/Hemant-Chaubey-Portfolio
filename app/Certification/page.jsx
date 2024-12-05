@@ -33,8 +33,8 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="p-8 bg-white">
-      <h2 className="text-4xl font-bold mb-8">Certifications</h2>
+    <section id="certification" className="p-8 bg-white">
+      <h2 className="text-4xl font-bold mb-8 text-orange-600">Certifications</h2>
       <ul className="space-y-4">
         {certifications.map((cert, index) => (
           <li key={index} className="flex items-start space-x-4">

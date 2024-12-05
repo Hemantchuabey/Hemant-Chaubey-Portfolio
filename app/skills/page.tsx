@@ -60,7 +60,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="p-8">
-      <h2 className="text-4xl font-bold mb-6">Skills</h2>
+      <h2 className="text-4xl font-bold mb-6 text-orange-600">Skills</h2>
 
       <div>
         <h3 className="text-xl font-medium mb-4">Programming Languages & Tools</h3>
