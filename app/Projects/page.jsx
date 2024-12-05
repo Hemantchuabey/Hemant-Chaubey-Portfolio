@@ -13,18 +13,17 @@ function Projects() {
     <section id="projects" className="p-8">
       <h2 className="text-4xl font-bold mb-6 text-orange-600">Projects</h2>
     <div>
-        <h3 className="text-xl font-medium mb-4">Programming Languages & Tools</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
         {projects.map((project) => (
           <Link href={project.link} className="w-full flex flex-col items-center justify-center mt-4" key={project.name} target='_blank'>
           <Image
             src={project.path} 
             alt={project.name}
-            className="w-full rounded-3xl"
+            className="w-full rounded-3xl hover:scale-95 transition-all 0.3 ease-in-out"
             width={450}
             height={450}
           />
-          <h2 className='text-xl text-gray-600 hover:text-gray-900'>{project.name}</h2>
+          <h2 className='text-xl text-gray-600 hover:text-gray-900 transition-all 0.3 ease-in-out'>{project.name}</h2>
         </Link>
         ))}
         

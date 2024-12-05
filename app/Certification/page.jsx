@@ -38,7 +38,7 @@ const Certifications = () => {
       <ul className="space-y-4">
         {certifications.map((cert, index) => (
           <li key={index} className="flex items-start space-x-4">
-            <span className="text-orange-600 text-lg">●</span>
+            <span className="text-orange-600 text-lg">⭐</span>
             <div>
               <p className="text-lg font-medium text-gray-600 hover:text-gray-900">{cert.date} - {cert.title}</p>
             </div>

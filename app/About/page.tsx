@@ -16,12 +16,12 @@ const About = () => (
         Connect With Me
       </h2>
       <div className='flex gap-5'>
-      <a href="https://www.linkedin.com/in/hemant-chaubey-9400a1267/" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in'><FaLinkedin size={35} color='darkblue' />
+      <a href="https://www.linkedin.com/in/hemant-chaubey-9400a1267/" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in' title="Linkedin"><FaLinkedin size={35} color='darkblue' />
       </a>
-      <a href="https://github.com/Hemantchuabey" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in'><FaGithubSquare size={35} color=''/></a>
-      <a href="https://leetcode.com/u/hemant_chaubey/" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in'><SiLeetcode size={35} color='orange' />
+      <a href="https://github.com/Hemantchuabey" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in' title="Github"><FaGithubSquare size={35} color=''/></a>
+      <a href="https://leetcode.com/u/hemant_chaubey/" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in' title="Leetcode"><SiLeetcode size={35} color='orange' />
       </a>
-      <a href="https://x.com/Hemant1905" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in'><FaSquareXTwitter size={35} color=''/>
+      <a href="https://x.com/Hemant1905" target="_blank" rel="noopener noreferrer" className='hover:scale-105 transition-all 0.3 ease-in' title="X(Twitter)"><FaSquareXTwitter size={35} color=''/>
       </a>
       </div>
     </div>
