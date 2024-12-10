@@ -10,7 +10,7 @@ const Sidebar = () => {
   const links = useMemo(
     () => [
       { name: "About", id: "about" },
-      // { name: "Experience", id: "experience" },
+      { name: "Experience", id: "experience" },
       // { name: "Skills", id: "skills" },
       // { name: "Projects", id: "projects" },
       // { name: "Education", id: "education" },
@@ -23,12 +23,16 @@ const Sidebar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = links.map((link) => document.getElementById(link.id));
+      console.log("sections ::  : ", sections);
+      sections.map((section) => console.log(section?.id));
       let currentSection = activeSection;
 
-      sections.forEach((section) => {
+      sections.forEach((section: HTMLElement | null) => {
         const rect = section?.getBoundingClientRect();
         if (rect && rect.top <= window.innerHeight / 2 && rect.bottom > 0) {
-          currentSection = section.id;
+          if (section?.id) {
+            currentSection = section.id;
+          }
         }
       });
 
@@ -41,7 +45,7 @@ const Sidebar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [links, activeSection]);
 
-  const handleLinkClick = (id) => {
+  const handleLinkClick = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
