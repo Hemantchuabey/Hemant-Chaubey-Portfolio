@@ -12,7 +12,7 @@ const Sidebar = () => {
       { name: "About", id: "about" },
       { name: "Experience", id: "experience" },
       { name: "Skills", id: "skills" },
-      // { name: "Projects", id: "projects" },
+      { name: "Projects", id: "projects" },
       // { name: "Education", id: "education" },
       // { name: "Certifications", id: "certification" },
       // { name: "Interest", id: "interest" },
