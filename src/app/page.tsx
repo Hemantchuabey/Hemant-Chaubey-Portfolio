@@ -1,5 +1,6 @@
 import About from "./About/page";
 import Experience from "./Experience/page";
+import Skills from "./Skills/page";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       </section>
       <section id="experience" className="h-screen px-6 py-10">
         <Experience />
+      </section>
+      <section id="skills" className="h-full px-6 py-10">
+        <Skills />
       </section>
     </main>
   );
