@@ -10,12 +10,12 @@ const Sidebar = () => {
   const links = useMemo(
     () => [
       { name: "About", id: "about" },
-      { name: "Experience", id: "experience" },
-      { name: "Skills", id: "skills" },
-      { name: "Projects", id: "projects" },
-      { name: "Education", id: "education" },
-      { name: "Certifications", id: "certification" },
-      { name: "Interest", id: "interest" },
+      // { name: "Experience", id: "experience" },
+      // { name: "Skills", id: "skills" },
+      // { name: "Projects", id: "projects" },
+      // { name: "Education", id: "education" },
+      // { name: "Certifications", id: "certification" },
+      // { name: "Interest", id: "interest" },
     ],
     []
   );
@@ -57,7 +57,7 @@ const Sidebar = () => {
       {/* Profile Image */}
       <Link href="/" className="w-full flex items-center justify-center mt-4">
         <Image
-          src="/WhatsApp Image 2024-08-18 at 4.16.46 PM (1).jpeg"
+          src="/ProfilePic.jpeg"
           alt="Profile"
           className="w-[35%] h-[100%] hover:w-[34%] hover:h-[99%] rounded-3xl transition-all 0.3 ease-in"
           width={96}

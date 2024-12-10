@@ -1,8 +1,11 @@
+import About from "./About/page";
 
 export default function Home() {
   return (
-    <div className="">
-      Konichiwa
-    </div>
+    <main className=" flex flex-col">
+      <section id="about" className="h-screen px-6 py-10">
+        <About />
+      </section>
+    </main>
   );
 }
