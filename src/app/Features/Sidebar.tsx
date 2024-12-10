@@ -15,7 +15,7 @@ const Sidebar = () => {
       { name: "Projects", id: "projects" },
       { name: "Education", id: "education" },
       { name: "Certifications", id: "certification" },
-      // { name: "Interest", id: "interest" },
+      { name: "Interest", id: "interest" },
     ],
     []
   );

@@ -1,9 +1,10 @@
-import About from "./About/page";
-import Certifications from "./Certification/page";
-import Education from "./Education/page";
-import Experience from "./Experience/page";
-import Projects from "./Projects/page";
-import Skills from "./Skills/page";
+import About from "./Component/About/page";
+import Certifications from "./Component/Certification/page";
+import Education from "./Component/Education/page";
+import Experience from "./Component/Experience/page";
+import Interest from "./Component/Interest/page";
+import Projects from "./Component/Projects/page";
+import Skills from "./Component/Skills/page";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
       </section>
       <section id="certification" className="h-screen px-6 py-10">
         <Certifications />
+      </section>
+      <section id="interest" className="h-screen px-6 py-10">
+        <Interest />
       </section>
     </main>
   );
