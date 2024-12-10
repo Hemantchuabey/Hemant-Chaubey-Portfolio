@@ -1,4 +1,5 @@
 import About from "./About/page";
+import Certifications from "./Certification/page";
 import Education from "./Education/page";
 import Experience from "./Experience/page";
 import Projects from "./Projects/page";
@@ -21,6 +22,9 @@ export default function Home() {
       </section>
       <section id="education" className="h-screen px-6 py-10">
         <Education />
+      </section>
+      <section id="certification" className="h-screen px-6 py-10">
+        <Certifications />
       </section>
     </main>
   );
