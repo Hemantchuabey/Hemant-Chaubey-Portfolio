@@ -5,8 +5,11 @@ import { SiLeetcode } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 const About = () => (
-  <div className="header flex flex-col gap-[1.2rem] m-auto h-full" id="about">
-    <h1 className="lg:text-7xl text-6xl text-blue-950 p-0 m-0">
+  <div
+    className="header flex flex-col gap-[1.2rem] m-16 md:m-8 lg:m-auto h-full"
+    id="about"
+  >
+    <h1 className="lg:text-7xl md:text-6xl text-5xl text-blue-950 p-0 m-0">
       Hemant <span className="font-semibold text-orange-700">Chaubey</span>
     </h1>
     <h2 className="lg:text-2xl text-xl text-gray-400">

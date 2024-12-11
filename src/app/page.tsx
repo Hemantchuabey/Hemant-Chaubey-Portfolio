@@ -12,7 +12,7 @@ export default function Home() {
       <section id="about" className="h-screen px-6 py-10">
         <About />
       </section>
-      <section id="experience" className="h-screen px-6 py-10">
+      <section id="experience" className="h-full md:h-screen px-6 py-10">
         <Experience />
       </section>
       <section id="skills" className="h-full px-6 py-10">
