@@ -2,7 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-/* In globals.css */
-html {
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    --bg: 250 249 246;
+    --elevated: 255 255 255;
+    --fg: 17 17 20;
+    --muted: 68 68 76;
+    --subtle: 113 113 122;
+    --border: 226 224 218;
+    --card: 255 255 255;
+    --accent: 217 95 18;
+    --accent-fg: 255 255 255;
+    --spotlight: rgba(217, 95, 18, 0.08);
+    --spotlight-border: rgba(217, 95, 18, 0.28);
+    --grid-line: rgba(24, 24, 27, 0.045);
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 8 8 11;
+    --elevated: 14 14 19;
+    --fg: 245 245 247;
+    --muted: 184 184 194;
+    --subtle: 138 138 150;
+    --border: 36 36 44;
+    --card: 16 16 22;
+    --accent: 251 146 60;
+    --accent-fg: 10 10 12;
+    --spotlight: rgba(251, 146, 60, 0.11);
+    --spotlight-border: rgba(251, 146, 60, 0.35);
+    --grid-line: rgba(255, 255, 255, 0.035);
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased selection:bg-accent/25;
+    text-rendering: optimizeLegibility;
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg rounded-md;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  /* Architectural engineering background grid with radial fade */
+  .bg-architectural-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse 85% 65% at 50% 15%, #000 45%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 65% at 50% 15%, #000 45%, transparent 100%);
+  }
+
+  /* Luxury layered card with top specular hairline */
+  .card {
+    @apply relative rounded-2xl border border-border bg-card/90 backdrop-blur-sm;
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.07) inset,
+      0 12px 32px -16px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark .card {
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+      0 20px 44px -20px rgba(0, 0, 0, 0.65);
+  }
+
+  /* Cursor-following spotlight effect */
+  .spotlight-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      520px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+      var(--spotlight),
+      transparent 45%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
+  .spotlight-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Reveal-on-scroll */
+  html.js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
