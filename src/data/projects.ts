@@ -1,8 +1,6 @@
 import type { StaticImageData } from "next/image";
-import sneakerWorld from "../../public/sneaker-world.png";
-import foodTailwind from "../../public/food-tailwind.png";
-import foodShopKart from "../../public/food-shop-kart.png";
-import kanbanBoard from "../../public/kanban-board.png";
+import sneakerHome from "../../public/sneakerhome.png";
+import foodKart from "../../public/foodkart.png";
 
 export type FeaturedProject = {
   slug: string;
@@ -21,90 +19,64 @@ export type FeaturedProject = {
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    slug: "sneaker-world",
+    slug: "sneakers-world",
     id: "BUILD_01",
     title: "Sneaker World",
-    category: "E-Commerce Storefront · State & Filtering Engine",
-    tagline: "High-speed responsive sneaker commerce experience with instant multi-facet filtering & dynamic cart state.",
+    category: "Haute Couture Commerce · RFC 7519 JWT & Web Audio",
+    tagline: "High-performance luxury footwear storefront featuring RFC 7519 client-side JWT auth, 15-minute auto-expiry session guard, and Web Audio synthesis.",
     description:
-      "Designed and built a fast, tactile sneaker shopping platform focused on zero-latency catalog filtering, size/color variant selection, and persistent cart orchestration.",
+      "A luxury e-commerce platform and private collector vault engineered with modern React 18, Redux Toolkit, and Tailwind CSS. Features an RFC 7519 compliant client-side JWT authentication system with active token countdown and auto-logout, a tab-lifecycle storage guard using sessionStorage sentinels, and a synthesized Web Audio feedback engine with zero audio asset latency.",
     highlights: [
-      "Instant client-side multi-attribute filtering (brand, price bracket, category, availability) with zero layout shift.",
-      "Optimistic cart state transitions with quantity validation, subtotal calculation, and responsive drawer UX.",
-      "Mobile-first product grid with smooth hover physics and lazy-loaded high-DPI sneaker imagery.",
+      "Client-side RFC 7519 JWT authentication with base64url header/payload decoding, 15-minute token lifespan countdown, expiry warnings, and interactive inspector modal.",
+      "Tab lifecycle storage guard utilizing sessionStorage sentinels to cleanly purge stale auth state when browser tabs are closed while preserving reload persistence.",
+      "Zero-latency haptic sound engine synthesized directly via the Web Audio API for bag additions, navigation clicks, and order settlements.",
+      "Luxury visual craft with 3D interactive card tilt physics, dynamic cursor spotlights, and responsive Tailwind layouts.",
     ],
-    stack: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Context / State API", "Vercel Edge"],
+    stack: [
+      "React 18",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "React Router 6",
+      "Web Audio API",
+      "RFC 7519 JWT",
+      "Vercel Edge",
+    ],
     metrics: [
-      { label: "Filter Latency", value: "<16ms" },
-      { label: "Lighthouse UI", value: "96+" },
+      { label: "Session Security", value: "RFC 7519 JWT" },
+      { label: "Audio Latency", value: "0ms (Web Audio)" },
     ],
-    image: sneakerWorld,
-    live: "https://sneakers-world-hemantchuabey.vercel.app/",
-    repo: "https://github.com/Hemantchuabey",
+    image: sneakerHome,
+    live: "https://sneakers-world-phi.vercel.app/",
+    repo: "https://github.com/Hemantchuabey/Sneakers-World",
   },
   {
-    slug: "food-shop-kart",
+    slug: "food-tailwind-app",
     id: "BUILD_02",
-    title: "Food Shop Kart",
-    category: "Consumer Ordering App · Redux Toolkit Architecture",
-    tagline: "Full-cycle food ordering application powered by deterministic Redux Toolkit slices and instant checkout flows.",
+    title: "Food Tailwind App",
+    category: "Culinary Commerce · Context Cart & Framer Motion",
+    tagline: "Dynamic food ordering experience with category filtering, slide-over cart drawer, and fluid Framer Motion animations.",
     description:
-      "A food discovery and cart ordering application demonstrating normalized Redux state management, dish customization, and friction-free checkout UX.",
+      "A modern, responsive food discovery and delivery web application built with React 18, Tailwind CSS, and Framer Motion. Engineered with centralized CartContext state management, category filtering across dishes, an interactive cart drawer with quantity counters and instant subtotal calculation, and smooth page micro-interactions.",
     highlights: [
-      "Centralized Redux Toolkit slices handling menu hydration, item modifiers, coupon logic, and cart persistence.",
-      "Category-driven menu exploration with debounced search and instant dietary filtering.",
-      "Accessible, touch-optimized item counters and real-time bill breakdown.",
+      "React CartContext state architecture managing item additions, quantity updates, modifier states, and sliding cart drawer synchronization.",
+      "Category-driven food menu filtering with instant response, responsive product cards, and quick-add actions.",
+      "Fluid micro-interactions and transition physics crafted using Framer Motion and custom Tailwind design tokens.",
+      "Lazy-loaded route splitting for Checkout and Order status pages to maintain fast first contentful paint.",
     ],
-    stack: ["React.js", "Redux Toolkit", "Tailwind CSS", "REST Integration", "Vercel"],
+    stack: [
+      "React 18",
+      "Framer Motion",
+      "Tailwind CSS",
+      "React Router 6",
+      "Context API",
+      "Vercel Edge",
+    ],
     metrics: [
-      { label: "State Architecture", value: "RTK Slices" },
-      { label: "UX Flow", value: "3-Tap Order" },
+      { label: "State Engine", value: "Context API" },
+      { label: "Motion", value: "Framer 60 FPS" },
     ],
-    image: foodShopKart,
-    live: "https://food-shop-kart.vercel.app/",
-    repo: "https://github.com/Hemantchuabey",
-  },
-  {
-    slug: "kanban-board",
-    id: "BUILD_03",
-    title: "Interactive Kanban Workspace",
-    category: "Productivity Tool · Drag-and-Drop State Machine",
-    tagline: "Tactile task & sprint board with multi-column drag-and-drop, priority tagging, and local state persistence.",
-    description:
-      "An engineering-focused Kanban workflow board built to handle smooth card reordering across columns without external heavy dependencies.",
-    highlights: [
-      "Deterministic column & card ordering state with drag-and-drop swimlane transitions.",
-      "Inline task creation, priority badges, and instant board filtering by status or tag.",
-      "Zero-flicker local persistence ensuring workspace state survives reloads cleanly.",
-    ],
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "Drag & Drop API", "Local Storage"],
-    metrics: [
-      { label: "Interaction", value: "60 FPS Drag" },
-      { label: "Persistence", value: "Local-First" },
-    ],
-    image: kanbanBoard,
-    repo: "https://github.com/Hemantchuabey",
-  },
-  {
-    slug: "food-tailwind",
-    id: "BUILD_04",
-    title: "Tailwind Culinary Experience",
-    category: "Design System & UI Craft · Responsive Architecture",
-    tagline: "Editorial-grade restaurant & culinary landing system crafted with custom Tailwind utility tokens.",
-    description:
-      "A showcase of fluid typography, responsive grid choreography, and accessible dark/light contrast built from scratch using Tailwind CSS.",
-    highlights: [
-      "Fluid clamp() typography and responsive CSS Grid layouts across mobile, tablet, and ultrawide viewports.",
-      "Custom micro-interactions, curated visual hierarchy, and semantic HTML5 landmarks.",
-      "Optimized asset delivery achieving sub-second First Contentful Paint.",
-    ],
-    stack: ["React.js", "Tailwind CSS", "HTML5 Semantic DOM", "Responsive Grid", "Vercel"],
-    metrics: [
-      { label: "FCP Speed", value: "~0.9s" },
-      { label: "Accessibility", value: "WCAG AA" },
-    ],
-    image: foodTailwind,
-    live: "https://food-tailwind-app.vercel.app/",
-    repo: "https://github.com/Hemantchuabey",
+    image: foodKart,
+    live: "https://food-tailwind-app-three.vercel.app/",
+    repo: "https://github.com/Hemantchuabey/Food-Tailwind-App",
   },
 ];
